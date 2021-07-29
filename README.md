@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My solution](https://github.com/hemanuela/clipboard-landing-page-master)
+- Live Site URL: [Here ->](https://hemanuela.github.io/clipboard-landing-page-master/)
 
 ## My process
 
