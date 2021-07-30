@@ -27,6 +27,8 @@ body {
     background-size: contain;
 }
 
+
+
 /** General adjustments - margin, display, alignment **/
 .container {
     text-align: center;
@@ -210,8 +212,9 @@ footer li:hover {
 }
 
 
+
 /** MEDIA - ADJUSMENTS **/
-@media only screen and (max-width:750px){
+@media only screen and (max-width:850px) and (min-width:375px){
     body {
         background-image: url('images/bg-header-mobile.png');
         background-position: top;
@@ -300,3 +303,56 @@ footer li:hover {
     }
 }
 
+/** MEDIA - ADJUSMENTS **/
+@media only screen and (max-width:1200px) and (min-width: 851px) {
+
+    .section-06, .section-07 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section-07 img {
+        padding: 1rem;
+    }
+
+    .section-02 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section-02 #column-02 {
+        text-align: center;
+    }
+
+    .section-02 img {
+        margin: auto;
+    }
+
+    
+    main, .section-01, .section-03, .section-05, .section-08  {
+        margin: 0 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-bottom: 5rem;
+        margin-top: 2rem;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: auto;
+        height: 16rem;
+        background-color: hsla(202, 11%, 66%, 0.315);
+        width: 100%;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+
+    .list-footer {
+        margin-top: -3rem;
+    }
+
+}
