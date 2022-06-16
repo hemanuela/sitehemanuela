@@ -4,7 +4,8 @@
     --b-text-color: hsl(0, 0%, 100%);
     --button-ios-color: hsl(171, 66%, 44%);
     --button-mac-color: hsl(233, 100%, 69%);
-    --font-bj: 'Bai Jamjuree' ;
+    --font-bj: 'Raleway' ;
+    --font-h1: 'Raleway';
 }
 
 * {
@@ -15,11 +16,13 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 body {
     font-family: var(--font-bj);
     font-size: 1.2rem;
+    font-weight: 600;
 
     background-image: url('images/bg-header-desktop.png');
     background-repeat: no-repeat;
@@ -27,6 +30,15 @@ body {
     background-size: contain;
 }
 
+body h1 {
+    font-family: var(--font-h1);
+    font-size: 200;
+}
+
+body a {
+    text-decoration: none;
+    color:hsl(210, 10%, 33%);
+}
 
 
 /** General adjustments - margin, display, alignment **/
@@ -41,11 +53,11 @@ body {
 
 
 main, .section-01, .section-03, .section-05, .section-08  {
-    margin: 0 22rem;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     margin-top: 2rem;
 }
 
@@ -69,9 +81,15 @@ main, .section-01, .section-03, .section-05, .section-08  {
     color: var(--h-text-color);
 }
 
+.container h3 :hover {
+    filter: invert(32%) sepia(90%) saturate(521%) hue-rotate(149deg) brightness(50%) contrast(89%);
+}
+
+
 .container p, footer {
     color: var(--p-text-color);
     line-height: 1.8rem;
+    font-weight: 400;
 }
 
 .container p {
@@ -137,12 +155,13 @@ header img {
 }
 
 .section-06 div {
-    width: 25rem;
-    height: 15rem;
+    width: 32rem;
+    height: 22rem;
+    margin: 1rem;
 }
 
-.section-06 figure {
-    height: 3rem;
+.section-06 figure img{
+    height: 5rem;
 }
 
 .section-06 h3 {
@@ -162,15 +181,20 @@ header img {
 
 /** FOOTER  **/
 footer {
-    display: grid;
-    grid-template-columns: 134px 820px 230px;
+    display: flex;
     height: 8.7rem;
     background-color: hsla(202, 11%, 66%, 0.315);
     width: 100%;
-    justify-content: center;
     margin-top: 4rem;
+    justify-content: center;
+    align-items: center;
 }
 
+footer .social-footer img {
+    margin: 2rem;
+}
+
+/**
 .logo-footer {
     transform: scale(0.5);
     margin-left: -4rem;
@@ -198,17 +222,14 @@ footer li:hover {
     text-align: left;
     line-height: 2.5rem;
 }
+**/
 
-.social-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor: pointer;
+.social-footer img {
+    filter: invert(83%) sepia(5%) saturate(547%) hue-rotate(157deg) brightness(50%) contrast(90%);
 }
 
 .social-footer img:hover {
-    filter: invert(69%) sepia(44%) saturate(449%) hue-rotate(132deg) brightness(85%) contrast(91%);
+    filter: invert(32%) sepia(90%) saturate(521%) hue-rotate(149deg) brightness(87%) contrast(89%);
 }
 
 
@@ -267,31 +288,8 @@ footer li:hover {
     
     footer {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-content: center;
-        height: 32rem;
+        height: 10rem;
         width: 100%;
-     }
-
-    .logo-footer {
-        margin: 0;
-    }
-
-    .list-footer {
-        justify-content: center;
-        padding: 0;
-    }
-
-    .list-footer ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        margin-left: -2.5rem;
-        margin-bottom: 4rem;
     }
 
     .social-footer {
@@ -342,17 +340,11 @@ footer li:hover {
     }
 
     footer {
-        display: grid;
-        grid-template-columns: auto;
-        height: 16rem;
+        display: flex;
+        height: 10rem;
         background-color: hsla(202, 11%, 66%, 0.315);
         width: 100%;
         justify-content: center;
         margin-top: 4rem;
     }
-
-    .list-footer {
-        margin-top: -3rem;
-    }
-
 }
