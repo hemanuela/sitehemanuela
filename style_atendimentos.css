@@ -1,0 +1,270 @@
+:root {
+    --h-text-color: hsl(210, 10%, 33%);
+    --p-text-color: hsl(201, 11%, 66%);
+    --b-text-color: hsl(0, 0%, 100%);
+    --button-ios-color: hsl(171, 66%, 44%);
+    --button-mac-color: hsl(233, 100%, 69%);
+    --font-h1: 'Anaktoria';
+    --font-h2: 'Cardo';
+    --font-button: 'Coco Gothic', sans-serif;
+    --font-body: 'Josefin Sans';
+}
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    background-color: #FAF9F6;
+}
+
+body h1 {
+    font-family: var(--font-h1);
+    font-size: 3rem;
+}
+
+body h2 {
+    font-family: var(--font-h2);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+body a {
+    text-decoration: none;
+    color:#1E1E1E;
+}
+
+
+
+
+/** General adjustments - margin, display, alignment **/
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+main, .block-01, .block-02 {
+    display: flex;
+    flex-direction:column;
+    height: 100vh;
+  
+    padding: 0 10% 0 10%;
+  
+    background-color: #D6D4C7;
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    justify-content: center;
+}
+
+
+.button a {
+    display:flex;
+    justify-content: center;
+
+    width: 20rem;
+
+    font-weight: bold;
+
+    margin-top: 2rem;
+    padding: 1.5rem;
+
+    border-radius: 5rem;
+
+    background-color: #A2A08B;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+
+/** MAIN - Atendimentos **/
+main {
+    background-image: url(images/fundo-sofa.png);
+    background-position-x: center;
+}
+
+main div {
+    width: 30%;
+    margin-top: 2rem;
+}
+
+
+/** Block-01 - Mentoria **/
+.block-01 {
+    background-image: url(images/fundo-mesa.png);
+}
+
+.block-01 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 40%;
+    margin: 0 0 0 24rem;
+}
+
+.block-01 h4 {
+    margin-top: 2rem;
+}
+
+
+/** Block-02 - Terapia online**/
+.block-02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-02 div {
+    margin: 1rem;
+}
+
+
+/** FOOTER  **/
+footer {
+    height: 8rem;
+    background-color: #FAF9F6;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer img {
+    margin: 2rem;
+    height: 3.5rem;
+    filter: invert(34%) sepia(0%) saturate(4464%) hue-rotate(333deg) brightness(111%) contrast(96%);
+}
+
+
+footer img:hover {
+    filter: invert(78%) sepia(9%) saturate(240%) hue-rotate(251deg) brightness(100%) contrast(87%);
+}
+
+
+/** MEDIA - ADJUSMENTS **/
+@media only screen and (max-width:850px) and (min-width:375px){
+
+    body {
+        font-size: 1rem;
+    }
+    
+    body h1 {
+        font-size: 2rem;
+    }
+    
+    body h2 {
+        font-size: 1.5rem;
+    }
+    
+    main, .block-01, .block-02 {    
+        padding: 0 5% 0 5%;
+    }
+
+    main div {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .block-01 div {
+        width: 100%;
+        margin: auto;
+    }
+
+    .block-01 {
+        background-image: url(images/fundo-mesa.png);
+        background-position: -10rem;
+    }
+
+    .block-02 {
+        flex-direction: column;
+        background-image: url('images/terapia-online2.png');
+        background-position: bottom;
+    }
+
+    .block-02 img {
+        display: none;
+    }
+        
+    .block-02 div {
+        margin: 1rem;
+    }
+
+    footer img {
+        margin: 1rem;
+        height: 2rem;
+    }
+
+}
+
+/** MEDIA - ADJUSMENTS **/
+@media only screen and (max-width:1200px) and (min-width: 851px){
+
+    body {
+        font-size: 1rem;
+    }
+    
+    body h1 {
+        font-size: 2rem;
+    }
+    
+    body h2 {
+        font-size: 1.5rem;
+    }
+
+    main, .block-01, .block-02 {    
+        padding: 0 5% 0 5%;
+    }
+
+    main div {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .block-01 div {
+        width: 100%;
+        margin: auto;
+    }
+
+    .block-01 {
+        background-image: url(images/fundo-mesa.png);
+        background-position: -10rem;
+    }
+
+
+}
+
+
+/**BOTÃO - VOLTAR AO TOPO **/
+#btn-back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+
+    background-image: url('images/arrow-circle-up.svg');
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

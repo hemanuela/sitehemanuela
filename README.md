@@ -1,5 +1,5 @@
-# Agência Didática
-- Site dedicado para uma agência de desenvolvimento de materiais de estudo
+# Hemanuela Paixão
+- Site dedicado para uma psicóloga
 
 
 ## Author

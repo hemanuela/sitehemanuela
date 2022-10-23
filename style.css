@@ -4,8 +4,10 @@
     --b-text-color: hsl(0, 0%, 100%);
     --button-ios-color: hsl(171, 66%, 44%);
     --button-mac-color: hsl(233, 100%, 69%);
-    --font-bj: 'Raleway' ;
-    --font-h1: 'Raleway';
+    --font-h1: 'Anaktoria';
+    --font-h2: 'Cardo';
+    --font-button: 'Coco Gothic', sans-serif;
+    --font-body: 'Josefin Sans';
 }
 
 * {
@@ -19,332 +21,290 @@ html {
 
 }
 
-body {
-    font-family: var(--font-bj);
-    font-size: 1.2rem;
-    font-weight: 600;
 
-    background-image: url('images/bg-header-desktop.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
+
+body {
+ 
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    background-color: #FAF9F6;
 }
 
 body h1 {
     font-family: var(--font-h1);
-    font-size: 200;
+    font-size: 3rem;
+}
+
+body h2 {
+    font-family: var(--font-h2);
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 body a {
     text-decoration: none;
-    color:hsl(210, 10%, 33%);
+    color:#1E1E1E;
 }
 
 
 /** General adjustments - margin, display, alignment **/
-.container {
-    text-align: center;
-    margin: 6rem 0 0 0;
+main  {
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
+    justify-content: center;
 
+    background-color: #FAF9F6;
 
-main, .section-01, .section-03, .section-05, .section-08  {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    text-align: center;
+
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
 
-.section-02, .section-06, .section-07 {
-    width: 74rem ;
+main img {
+    width: 100%;
+    filter: invert(34%) sepia(0%) saturate(4464%) hue-rotate(333deg) brightness(111%) contrast(96%);
+}
+
+main h2 {
+    font-family: 'Coco Gothic', sans-serif;
+    color: #A2A08B;
+}
+
+
+/** SECTION-01 - Terapia **/
+.section-01 {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 0 10% 0 10%;
+
+  width: fit-content;
+  block-size: fit-content;
+
+  background-color: #D6D4C7;
+}
+
+.section-01 .terapia {
+  margin: 4rem;
+  line-height: 1.5rem;
+}
+
+.section-01 .terapia h2, p{
+  margin-bottom: 2rem;
+}
+
+#citacao {
+    font-style: italic;
+}
+
+/** SECTION-02 - Menu**/
+.section-02 {
+    height: 100vh;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 4rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 0 10% 0 10%;
+
+    background-color: #FAF9F6
 }
 
+.section-02 .menu{
+    width: 25%;
+    flex-direction: column;
 
-
-/** General adjustments - font, color, button**/
-.container h1 {
-    font-weight: 600;
-    color: var(--h-text-color);
-}
-
-.container h2, h3 {
     font-weight: bold;
-    color: var(--h-text-color);
 }
 
-.container h3 :hover {
-    filter: invert(32%) sepia(90%) saturate(521%) hue-rotate(149deg) brightness(50%) contrast(89%);
-}
-
-
-.container p, footer {
-    color: var(--p-text-color);
-    line-height: 1.8rem;
-    font-weight: 400;
-}
-
-.container p {
-    margin-top: 0.7rem;
-    margin-bottom: 1.8rem;
-}
-
-/** BUTONS **/
-button {
-    width: 13.8rem ;
-    height: 3rem;
-    border-radius: 1.4rem;
-    color: var(--b-text-color);
-    font-family: var(--font-bj);
-    font-weight: 700;
-    margin: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    cursor: pointer;
-}
-
-.ios {
-    background-color: var(--button-ios-color);
-}
-
-.ios:hover {
-    background-color: hsla(171, 66%, 44%, 0.651);
-}
-
-.mac {
-    background-color: var(--button-mac-color);
-}
-
-.mac:hover {
-    background-color: hsla(233, 100%, 69%, 0.658);
-}
-
-
-/** HEADER - LOGO **/
-header img {
-    width: 6.25rem;
-    height: 6.25rem;
-}
-
-
-/** SECTION-02 **/
-.section-02 img {
-    margin-left: -14rem;
-    margin-right: 8rem;
-}
-
-.section-02 #column-02 {
-    margin: 4rem 4rem 6rem 2rem;
-    text-align: left; 
-}
-
-.section-02 .p3 {
-    margin-bottom: 4rem;
-}
-
-/** SECTION-06 **/
-.section-06 {
-    margin: 0 8rem ;
-}
-
-.section-06 div {
-    width: 32rem;
-    height: 22rem;
-    margin: 1rem;
-}
-
-.section-06 figure img{
-    height: 5rem;
-}
-
-.section-06 h3 {
+.menu .button {
+    margin: 2rem;
     padding: 1.5rem;
+    background-color: #A2A08B;
+    border-radius: 5rem;
+    text-align: center;
 }
 
-/** SECTION-07 **/
-.section-07 {
-    justify-content: space-between;
-    margin: 4rem 6rem;
+.tinta {
+    width: 50%;
+    padding-left: 10rem;
 }
 
-.section-08 {
-    height: 15.6rem;
+
+/** SECTION-03 - Sobre mim**/
+.section-03 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0 10% 0 10%;
+
+    background-color: #C9BDC9;
 }
+
+
+.hemanuela {
+    padding: 7rem;
+}
+
 
 
 /** FOOTER  **/
 footer {
     display: flex;
-    height: 8.7rem;
-    background-color: hsla(202, 11%, 66%, 0.315);
+    height: 8rem;
+    background-color: #FAF9F6;
     width: 100%;
-    margin-top: 4rem;
+
     justify-content: center;
     align-items: center;
 }
 
-footer .social-footer img {
+footer img {
     margin: 2rem;
+    height: 3.5rem;
+    filter: invert(34%) sepia(0%) saturate(4464%) hue-rotate(333deg) brightness(111%) contrast(96%);
 }
 
-/**
-.logo-footer {
-    transform: scale(0.5);
-    margin-left: -4rem;
-    cursor: pointer;
-}
 
-.list-footer ul {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(3, 206px);
-}
-
-footer li:hover {
-    filter: invert(58%) sepia(77%) saturate(272%) hue-rotate(132deg) brightness(94%) contrast(91%);
-}
-
-.list-footer a {
-    text-decoration: none;
-    color: var(--h-text-color);
-}
-
-.list-footer {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    line-height: 2.5rem;
-}
-**/
-
-.social-footer img {
-    filter: invert(83%) sepia(5%) saturate(547%) hue-rotate(157deg) brightness(50%) contrast(90%);
-}
-
-.social-footer img:hover {
-    filter: invert(32%) sepia(90%) saturate(521%) hue-rotate(149deg) brightness(87%) contrast(89%);
+footer img:hover {
+    filter: invert(78%) sepia(9%) saturate(240%) hue-rotate(251deg) brightness(100%) contrast(87%);
 }
 
 
 
 /** MEDIA - ADJUSMENTS **/
 @media only screen and (max-width:850px) and (min-width:375px){
-    body {
-        background-image: url('images/bg-header-mobile.png');
-        background-position: top;
-    }
 
-    main, .section-01, .section-02, .section-03, .section-04, .section-05, .section-06, .section-07, .section-08 {
-        width: 22rem;
-        margin: 2rem;
-    }
-
-    .section-02 img, .section-04 img {
-        width: 23rem;
-        transform: scale(0.8);
-        margin: 0;
-    }
-
-    .section-02 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #column-01, .section-04{
-        display: flex;
-        height: 9.3rem;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .section-02 #column-02 {
-        height: 25rem;
-        text-align: center;
-        margin: 4rem 0;
-    }
-
-
-    .section-07, .section-06{
-        display: flex;
-        flex-direction: column;
-        height: 37.5rem ;
-        align-items: center;
-        margin-bottom: 6rem;
-    }
-
-    .section-08 {
-        height: 27.5rem
-    }
-
-    
-    footer {
-        display: flex;
-        height: 10rem;
-        width: 100%;
-    }
-
-    .social-footer {
-        display: block;
-    }
-
-    .social-footer img {
-        padding: 1rem;
-    }
+body {
+    font-size: 1rem;
 }
+
+
+body h1 {
+    font-size: 2rem;
+}
+
+body h2 {
+    font-size: 1.5rem;
+}
+
+.section-01 {
+    flex-direction: column;
+    padding: 0 10% 0 10%;
+    background: url('images/eucalipto.png');
+    background-size: 30%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-color: #D6D4C7;
+}
+
+
+.section-01 .terapia {
+    margin: 1rem;
+    line-height: 1.2rem;
+    margin-top: 4rem;
+}
+
+.eucalipto {
+    display: none;
+}
+
+.section-02 {
+    flex-direction: column;
+    padding: 2rem;
+
+    background-image: url('images/tinta.png');
+    background-size: 60%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.section-02 .menu {
+    width: auto;
+}
+
+.tinta img {
+    display: none;
+}
+
+.menu .button {
+    width: 10rem;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-03 {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 3rem;
+
+    background-image: url('images/sombras.png');
+    background-size: 70%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+
+.section-03 .hemanuela {
+    padding: 0rem;
+}
+
+.section-03 .sombras {
+    display: none;
+}
+
+footer img {
+    margin: 1rem;
+    height: 2rem;
+    filter: invert(34%) sepia(0%) saturate(4464%) hue-rotate(333deg) brightness(111%) contrast(96%);
+}
+
+
 
 /** MEDIA - ADJUSMENTS **/
 @media only screen and (max-width:1200px) and (min-width: 851px) {
+body {
+    font-size: 1rem;
+}
 
-    .section-06, .section-07 {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
-    .section-07 img {
-        padding: 1rem;
-    }
+body h1 {
+    font-size: 2rem;
+}
 
-    .section-02 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-    }
+body h2 {
+    font-size: 1.5rem;
+}
 
-    .section-02 #column-02 {
-        text-align: center;
-    }
+.section-01 .terapia {
+    margin: 1rem;
+    line-height: 1.2rem;
+}
+}
 
-    .section-02 img {
-        margin: auto;
-    }
 
-    
-    main, .section-01, .section-03, .section-05, .section-08  {
-        margin: 0 20rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-bottom: 5rem;
-        margin-top: 2rem;
-    }
+/**BOTÃO - VOLTAR AO TOPO **/
+#btn-back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
 
-    footer {
-        display: flex;
-        height: 10rem;
-        background-color: hsla(202, 11%, 66%, 0.315);
-        width: 100%;
-        justify-content: center;
-        margin-top: 4rem;
-    }
+    background-image: url('images/arrow-circle-up.svg');
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
