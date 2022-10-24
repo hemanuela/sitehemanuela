@@ -10,6 +10,11 @@
     --font-body: 'Josefin Sans';
 }
 
+@font-face {
+    font-family: 'Anaktoria';
+    src: url('fonts/anaktoria-cdnfonts/Anaktoria.ttf');
+  }
+
 * {
     margin: 0;
     border: 0;
