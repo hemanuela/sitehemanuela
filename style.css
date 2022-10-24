@@ -11,9 +11,9 @@
 }
 
 @font-face {
-    font-family: 'Anaktoria';
+    font-family:'Anaktoria';
     src: url('fonts/anaktoria-cdnfonts/Anaktoria.ttf');
-  }
+}
 
 * {
     margin: 0;
@@ -38,7 +38,7 @@ body {
 }
 
 body h1 {
-    font-family: var(--font-h1);
+    font-family: 'Anaktoria';
     font-size: 3rem;
 }
 
