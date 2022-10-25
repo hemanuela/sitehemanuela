@@ -44,6 +44,13 @@ body h2 {
     margin-bottom: 2rem;
 }
 
+body h3{
+    font-family: 'Coco Gothic';
+    font-size: 2rem;
+    color: #A2A08B;
+    font-weight: bold;
+}
+
 body a {
     text-decoration: none;
     color:#1E1E1E;
@@ -70,12 +77,6 @@ main  {
 main img {
     width: 100%;
     filter: invert(34%) sepia(0%) saturate(4464%) hue-rotate(333deg) brightness(111%) contrast(96%);
-}
-
-main .subtitle {
-    font-family: 'Coco Gothic';
-    color: #A2A08B;
-    font-weight: bold;
 }
 
 
