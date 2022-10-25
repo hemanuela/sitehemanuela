@@ -13,6 +13,11 @@
     src: url('fonts/anaktoria-cdnfonts/Anaktoria.ttf');
 }
 
+@font-face {
+    font-family:'Coco Gothic';
+    src: url('fonts/coco-gothic-cdnfonts/Coco-Gothic-Bold-trial.ttf');
+}
+
 * {
     margin: 0;
     border: 0;
@@ -47,7 +52,6 @@ body h2 {
 body h3{
     font-family: 'Coco Gothic';
     font-size: 2rem;
-    color: #A2A08B;
 }
 
 body a {
@@ -203,6 +207,11 @@ body h2 {
     font-size: 1.5rem;
 }
 
+body h3{
+    font-family: 'Coco Gothic';
+    font-size: 1.5rem;
+}
+
 .section-01 {
     flex-direction: column;
     padding: 0 10% 0 10%;
@@ -291,6 +300,12 @@ body h1 {
 body h2 {
     font-size: 1.5rem;
 }
+
+body h3{
+    font-family: 'Coco Gothic';
+    font-size: 1.5rem;
+}
+
 
 .section-01 .terapia {
     margin: 1rem;
