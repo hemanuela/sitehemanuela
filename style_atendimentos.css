@@ -94,7 +94,7 @@ main, .block-01, .block-02 {
 /** MAIN - Atendimentos **/
 main {
     background-image: url(images/fundo-sofa.png);
-    background-position-x: center;
+    background-position: center;
 }
 
 main div {
@@ -177,6 +177,13 @@ footer img:hover {
     
     main, .block-01, .block-02 {    
         padding: 0 5% 0 5%;
+    }
+
+    main {
+        background-image: url(images/fundo-sofa.png);
+        background-position: -48rem;
+        justify-content: flex-start;
+        padding-top: 2rem;
     }
 
     main div {
