@@ -48,7 +48,6 @@ body h3{
     font-family: 'Coco Gothic';
     font-size: 2rem;
     color: #A2A08B;
-    font-weight: bold;
 }
 
 body a {
@@ -72,6 +71,10 @@ main  {
 
     margin-bottom: 2rem;
     margin-top: 2rem;
+}
+
+main h3 {
+    color: #A2A08B;
 }
 
 main img {
