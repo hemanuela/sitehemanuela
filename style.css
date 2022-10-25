@@ -73,8 +73,9 @@ main img {
 }
 
 main h2 {
-    font-family: 'Coco Gothic', sans-serif !important;
+    font-family: 'Coco Gothic';
     color: #A2A08B;
+    font-weight: bold;
 }
 
 
