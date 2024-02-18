@@ -126,15 +126,15 @@ footer img:hover {
 @media only screen and (max-width:850px) and (min-width:375px){
 
 body {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 body h1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 
 body h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 
 body {
@@ -170,11 +170,11 @@ background-repeat: no-repeat;
     }
     
     body h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     body h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     body {
