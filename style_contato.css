@@ -4,10 +4,10 @@
     --b-text-color: hsl(0, 0%, 100%);
     --button-ios-color: hsl(171, 66%, 44%);
     --button-mac-color: hsl(233, 100%, 69%);
-    --font-h1: 'Anaktoria';
-    --font-h2: 'Cardo';
-    --font-button: 'Coco Gothic', sans-serif;
-    --font-body: 'Josefin Sans';
+    --font-h1: 'Argue Demo';
+    --font-h2: 'Argue Demo';
+    --font-button: 'Rounded Elegance', sans-serif;
+    --font-body: 'Rounded Elegance';
 }
 
 * {
@@ -91,6 +91,12 @@ body a {
     margin-right: 1rem;
 }
 
+.contato-list img {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(43%) saturate(3068%) hue-rotate(353deg) brightness(97%) contrast(91%);
+
+}
+
+
 
 /** FOOTER  **/
 footer {
@@ -106,7 +112,7 @@ footer {
 footer img {
     margin: 2rem;
     height: 3.5rem;
-    filter: invert(34%) sepia(0%) saturate(4464%) hue-rotate(333deg) brightness(111%) contrast(96%);
+    filter: brightness(0) saturate(100%) invert(11%) sepia(43%) saturate(3068%) hue-rotate(353deg) brightness(97%) contrast(91%);
 }
 
 

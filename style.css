@@ -2,20 +2,20 @@
     --h-text-color: hsl(210, 10%, 33%);
     --p-text-color: hsl(201, 11%, 66%);
     --b-text-color: hsl(0, 0%, 100%);
-    --button-ios-color: hsl(171, 66%, 44%);
-    --button-mac-color: hsl(233, 100%, 69%);
-    --font-button: 'Coco Gothic', sans-serif;
-    --font-body: 'Josefin Sans';
+    --button-ios-color: hsl(16, 77%, 10%);
+    --button-mac-color: hsl(20, 73%, 22%);
+    --font-button: 'Rounded Elegance', sans-serif;
+    --font-body: 'Rounded Elegance';
 }
 
 @font-face {
-    font-family:'Anaktoria';
-    src: url('fonts/anaktoria-cdnfonts/Anaktoria.ttf');
+    font-family:'Argue Demo';
+    src: url('fonts/argue-demo-cdnfonts/Argue/DEMO.otf');
 }
 
 @font-face {
-    font-family:'Coco Gothic';
-    src: url('fonts/coco-gothic-cdnfonts/Coco-Gothic-Bold-trial.ttf');
+    font-family:'Rounded Elegance';
+    src: url('fonts/rounded_elegance/Rounded_Elegance.ttf');
 }
 
 * {
@@ -35,22 +35,22 @@ body {
     font-size: 1.2rem;
     font-weight: 400;
 
-    background-color: #FAF9F6;
+    background-color: #562011;
 }
 
 body h1 {
-    font-family: 'Anaktoria';
+    font-family: 'Argue Demo';
     font-size: 3rem;
 }
 
 body h2 {
-    font-family:'Cardo';
+    font-family:'Argue Demo';
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
 body h3{
-    font-family: 'Coco Gothic';
+    font-family: 'Rounded Elegance';
     font-size: 2rem;
 }
 
@@ -69,7 +69,7 @@ main  {
     align-items: center;
     justify-content: center;
 
-    background-color: #FAF9F6;
+    background-color: #562011;
 
     text-align: center;
 
@@ -78,12 +78,11 @@ main  {
 }
 
 main h3 {
-    color: #A2A08B;
+    color:#d9c3ad;
 }
 
 main img {
     width: 100%;
-    filter: invert(34%) sepia(0%) saturate(4464%) hue-rotate(333deg) brightness(111%) contrast(96%);
 }
 
 
@@ -98,8 +97,7 @@ main img {
 
   width: fit-content;
   block-size: fit-content;
-
-  background-color: #D6D4C7;
+  background-color: #ddc1af;
 }
 
 .section-01 .terapia {
@@ -124,7 +122,7 @@ main img {
     align-content: center;
     padding: 0 10% 0 10%;
 
-    background-color: #FAF9F6
+    background-color: #ddc1af;
 }
 
 .section-02 .menu{
@@ -155,9 +153,9 @@ main img {
     align-items: center;
     justify-content: space-around;
 
-    padding: 0 10% 0 10%;
+    padding: 0 5% 0 5%;
 
-    background-color: #C9BDC9;
+    background-color: #e3e5e4;
 }
 
 
@@ -171,7 +169,7 @@ main img {
 footer {
     display: flex;
     height: 8rem;
-    background-color: #FAF9F6;
+    background-color: #e3e5e4;
     width: 100%;
 
     justify-content: center;
@@ -181,12 +179,12 @@ footer {
 footer img {
     margin: 2rem;
     height: 3.5rem;
-    filter: invert(34%) sepia(0%) saturate(4464%) hue-rotate(333deg) brightness(111%) contrast(96%);
+    filter: brightness(0) saturate(100%) invert(11%) sepia(43%) saturate(3068%) hue-rotate(353deg) brightness(97%) contrast(91%);
 }
 
 
 footer img:hover {
-    filter: invert(78%) sepia(9%) saturate(240%) hue-rotate(251deg) brightness(100%) contrast(87%);
+    filter: brightness(0) saturate(100%) invert(19%) sepia(18%) saturate(1210%) hue-rotate(338deg) brightness(98%) contrast(86%);
 }
 
 
@@ -200,16 +198,16 @@ body {
 
 
 body h1 {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 body h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 body h3{
-    font-family: 'Coco Gothic';
-    font-size: 1.5rem;
+    font-family: 'Rounded Elegance';
+    font-size: 1rem;
 }
 
 .section-01 {
@@ -281,7 +279,7 @@ body h3{
 footer img {
     margin: 1rem;
     height: 2rem;
-    filter: invert(34%) sepia(0%) saturate(4464%) hue-rotate(333deg) brightness(111%) contrast(96%);
+    filter: brightness(0) saturate(100%) invert(11%) sepia(43%) saturate(3068%) hue-rotate(353deg) brightness(97%) contrast(91%);
 }
 
 
@@ -294,22 +292,22 @@ body {
 
 
 body h1 {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 body h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 body h3{
-    font-family: 'Coco Gothic';
-    font-size: 1.5rem;
+    font-family: 'Rounded Elegance';
+    font-size: 1rem;
 }
 
 
 .section-01 .terapia {
     margin: 1rem;
-    line-height: 1.2rem;
+    line-height: 1rem;
 }
 }
 
@@ -328,4 +326,5 @@ body h3{
     background-position: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+}
 }
