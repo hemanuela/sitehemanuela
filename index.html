@@ -49,53 +49,137 @@ gtag('config', 'G-2NSF326CYN');
     scroll-behavior: smooth;
   }
 
-  /* Nav fixa */
+  /* ── Nav fixa ── */
   header {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     z-index: 999;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 16px 40px;
+    justify-content: flex-end; /* links à direita, sem logo */
+    padding: 18px 40px;
     transition: background 0.4s ease, box-shadow 0.4s ease;
   }
 
   header.nav-scrolled {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.93);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   }
 
-  header .nav-logo img {
-    height: 48px;
-    width: auto;
-  }
-
+  /* Links do menu – cor clara por padrão, escurece ao rolar */
   header nav a {
     margin-left: 28px;
     font-size: 0.82rem;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     text-decoration: none;
-    color: inherit;
+    color: #f5f0e8;          /* cor clara da paleta */
+    opacity: 0.9;
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+
+  header.nav-scrolled nav a {
+    color: inherit;          /* volta para a cor do tema ao rolar */
     opacity: 0.75;
-    transition: opacity 0.2s;
   }
 
   header nav a:hover {
     opacity: 1;
   }
 
-  /* Compensa a nav fixa no topo da página */
-  body {
-    padding-top: 80px;
+  /* ── Menu sanduíche (mobile) ── */
+  .nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    margin-left: auto;
   }
 
-  /* Scroll reveal */
+  .nav-burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #f5f0e8;
+    border-radius: 2px;
+    transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  header.nav-scrolled .nav-burger span {
+    background: #333;
+  }
+
+  /* Drawer mobile */
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  .nav-drawer.open {
+    display: flex;
+  }
+
+  .nav-drawer a {
+    font-size: 1.6rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  .nav-drawer a:hover {
+    opacity: 1;
+  }
+
+  .nav-drawer-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.6;
+  }
+
+  /* ── Compensar nav fixa ── */
+  body {
+    padding-top: 64px;
+  }
+
+  /* ── Responsividade de fontes ── */
+  h1, h2 {
+    font-size: clamp(1.4rem, 5vw, 2.4rem);
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+  }
+
+  p, li {
+    font-size: clamp(0.88rem, 2.5vw, 1rem);
+  }
+
+  #citacao {
+    font-size: clamp(0.82rem, 2.2vw, 0.95rem);
+  }
+
+  /* ── Scroll reveal ── */
   .reveal {
     opacity: 0;
     transform: translateY(28px);
@@ -107,14 +191,12 @@ gtag('config', 'G-2NSF326CYN');
     transform: translateY(0);
   }
 
-  /* Botão flutuante WhatsApp */
+  /* ── Botão flutuante WhatsApp ── */
   .fab-whatsapp {
     position: fixed;
-    bottom: 28px;
-    right: 28px;
+    bottom: 28px; right: 28px;
     z-index: 998;
-    width: 56px;
-    height: 56px;
+    width: 56px; height: 56px;
     background-color: #25D366;
     border-radius: 50%;
     display: flex;
@@ -131,16 +213,14 @@ gtag('config', 'G-2NSF326CYN');
   }
 
   .fab-whatsapp svg {
-    width: 26px;
-    height: 26px;
+    width: 26px; height: 26px;
     fill: white;
   }
 
-  /* Botão voltar ao topo */
+  /* ── Botão voltar ao topo ── */
   #btn-back-to-top {
     position: fixed;
-    bottom: 96px;
-    right: 28px;
+    bottom: 96px; right: 28px;
     z-index: 998;
     opacity: 0;
     pointer-events: none;
@@ -150,6 +230,21 @@ gtag('config', 'G-2NSF326CYN');
   #btn-back-to-top.show {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  /* ── Responsivo: mobile ── */
+  @media (max-width: 640px) {
+    header {
+      padding: 16px 20px;
+    }
+
+    header nav {
+      display: none; /* esconde links; usa drawer */
+    }
+
+    .nav-burger {
+      display: flex;
+    }
   }
 </style>
 
@@ -164,16 +259,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HEADER - Nav fixa -->
 <header id="site-header">
-  <a href="#" class="nav-logo">
-    <img src="images/H-logo.png" alt="Hemanuela Paixão">
-  </a>
-  <nav>
+  <nav id="site-nav">
     <a href="#section-01">Terapia</a>
     <a href="#section-03">Sobre</a>
     <a href="atendimentos.html">Atendimentos</a>
     <a href="contato.html">Contato</a>
   </nav>
+  <button class="nav-burger" id="nav-burger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
+<!-- Drawer mobile -->
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="nav-drawer-close" id="nav-drawer-close" aria-label="Fechar menu">×</button>
+  <a href="#section-01" class="drawer-link">Terapia</a>
+  <a href="#section-03" class="drawer-link">Sobre</a>
+  <a href="atendimentos.html" class="drawer-link">Atendimentos</a>
+  <a href="contato.html" class="drawer-link">Contato</a>
+</div>
 
 <!-- MAIN - Logo -->
 <main>
@@ -297,6 +401,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   document.querySelectorAll('.reveal').forEach(function (el) {
     observer.observe(el);
+  });
+
+  // Menu sanduíche
+  const burger = document.getElementById('nav-burger');
+  const drawer = document.getElementById('nav-drawer');
+  const drawerClose = document.getElementById('nav-drawer-close');
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  burger.addEventListener('click', openDrawer);
+  drawerClose.addEventListener('click', closeDrawer);
+
+  // Fecha o drawer ao clicar em qualquer link
+  drawer.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeDrawer);
   });
 </script>
 
