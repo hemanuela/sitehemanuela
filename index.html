@@ -1,178 +1,1284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5RLT7RZ');</script>
   <!-- End Google Tag Manager -->
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2NSF326CYN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2NSF326CYN');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NSF326CYN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NSF326CYN');
+  </script>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hemanuela Paixão — Psicóloga em Lages-SC. Atendimento clínico online e presencial. CRP 12/24418.">
+  <meta property="og:title" content="Hemanuela Paixão — Psicóloga">
+  <meta property="og:description" content="Atendimento clínico online e presencial em Lages-SC. CRP 12/24418.">
+  <meta property="og:url" content="https://hemanuelapaixao.com.br">
+  <meta property="og:type" content="website">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
 
-  <!--  FONTS -->
-  <link href="http://fonts.cdnfonts.com/css/anaktoria" rel="stylesheet">
-
-  <style>
-    @import url('https://fonts.cdnfonts.com/css/argue-demo');
-  </style>
-
-
-  <style>
-    @import url('https://fonts.cdnfonts.com/css/rounded-elegance');
-  </style>
-
-
-
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Hemanuela Paixão — Psicóloga</title>
 
-                
+  <style>
+    /* ─── Reset & Tokens ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <title> Hemanuela Paixão </title>
+    :root {
+      --cream:       #F8F4EE;
+      --cream-dark:  #EDE7DC;
+      --ink:         #2A1F14;
+      --ink-soft:    #5C4E3D;
+      --sage:        #6E856A;
+      --sage-light:  #B8C9B4;
+      --sage-pale:   #EBF0E9;
+      --gold:        #B8956A;
+      --white:       #FDFAF6;
 
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', sans-serif;
+
+      --r-sm: 8px;
+      --r-md: 16px;
+      --r-lg: 32px;
+
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a   { color: inherit; text-decoration: none; }
+
+    /* ─── Navigation ─────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease), padding 0.4s var(--ease);
+    }
+
+    .nav.scrolled {
+      background: rgba(248, 244, 238, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(42,31,20,0.08);
+      padding: 14px 48px;
+    }
+
+    .nav__logo img {
+      height: 44px;
+      width: auto;
+      transition: opacity 0.3s;
+    }
+    .nav__logo img:hover { opacity: 0.75; }
+
+    .nav__links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      position: relative;
+      transition: color 0.25s;
+    }
+
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1.5px;
+      background: var(--sage);
+      transition: width 0.3s var(--ease);
+    }
+
+    .nav__links a:hover { color: var(--ink); }
+    .nav__links a:hover::after { width: 100%; }
+
+    .nav__cta {
+      background: var(--sage);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-size: 0.82rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      transition: background 0.25s, transform 0.2s !important;
+    }
+    .nav__cta::after { display: none !important; }
+    .nav__cta:hover { background: var(--ink) !important; transform: translateY(-1px); }
+
+    /* Hamburger */
+    .nav__burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .nav__burger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ─── Hero ───────────────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(110,133,106,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(184,149,106,0.08) 0%, transparent 60%);
+    }
+
+    .hero__content { position: relative; z-index: 1; }
+
+    .hero__eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 32px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.8s var(--ease) 0.2s forwards;
+    }
+
+    .hero__logo {
+      margin: 0 auto 40px;
+      width: 160px;
+      opacity: 0;
+      transform: translateY(20px) scale(0.96);
+      animation: fadeUp 1s var(--ease) 0.4s forwards;
+    }
+
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 24px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s var(--ease) 0.55s forwards;
+    }
+
+    .hero__title em {
+      font-style: italic;
+      color: var(--sage);
+    }
+
+    .hero__subtitle {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      max-width: 460px;
+      margin: 0 auto 48px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 1s var(--ease) 0.7s forwards;
+    }
+
+    .hero__actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease) 0.85s forwards;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s var(--ease);
+    }
+
+    .btn--primary {
+      background: var(--sage);
+      color: var(--white);
+    }
+    .btn--primary:hover {
+      background: var(--ink);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(42,31,20,0.15);
+    }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--sage-light);
+    }
+    .btn--ghost:hover {
+      border-color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 36px; left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease) 1.2s forwards;
+    }
+
+    .hero__scroll span {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .hero__scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--sage-light), transparent);
+      animation: scrollLine 2s ease-in-out 1.5s infinite;
+    }
+
+    @keyframes scrollLine {
+      0%, 100% { transform: scaleY(1); opacity: 1; }
+      50% { transform: scaleY(0.4); opacity: 0.4; }
+    }
+
+    /* ─── Section base ───────────────────────────────────── */
+    section { padding: 120px 24px; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 32px;
+    }
+
+    .section-title em { font-style: italic; color: var(--sage); }
+
+    /* ─── Fade-in animation ──────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ─── Divider ─────────────────────────────────────────── */
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: var(--sage-light);
+      margin-bottom: 28px;
+    }
+
+    /* ─── Section: Terapia ───────────────────────────────── */
+    #terapia { background: var(--white); }
+
+    .terapia-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .terapia__visual {
+      position: relative;
+    }
+
+    .terapia__img-wrap {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: var(--sage-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .terapia__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      mix-blend-mode: multiply;
+    }
+
+    .terapia__badge {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      background: var(--gold);
+      color: var(--white);
+      padding: 20px 24px;
+      border-radius: var(--r-md);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.4;
+      max-width: 180px;
+      box-shadow: 0 12px 32px rgba(184,149,106,0.3);
+    }
+
+    .terapia__text p {
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    .terapia__quote {
+      border-left: 3px solid var(--sage);
+      padding: 20px 24px;
+      margin: 32px 0;
+      background: var(--sage-pale);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--ink-soft);
+    }
+
+    .terapia__quote cite {
+      display: block;
+      margin-top: 12px;
+      font-family: var(--font-body);
+      font-style: normal;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    /* ─── Section: Sobre ─────────────────────────────────── */
+    #sobre { background: var(--cream); }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .sobre__img-wrap {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      background: var(--cream-dark);
+    }
+
+    .sobre__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sobre__text p {
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+      margin-bottom: 18px;
+    }
+
+    .sobre__crp {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 8px 18px;
+      background: var(--sage-pale);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--sage);
+    }
+
+    .sobre__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .tag {
+      padding: 6px 16px;
+      border: 1.5px solid var(--sage-light);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+    }
+
+    /* ─── Section: Atendimentos ──────────────────────────── */
+    #atendimentos { background: var(--ink); color: var(--cream); }
+
+    #atendimentos .section-label { color: var(--sage-light); }
+    #atendimentos .section-title { color: var(--cream); }
+    #atendimentos .divider { background: var(--sage); }
+
+    .atend-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .atend-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--r-lg);
+      padding: 48px 40px;
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    }
+
+    .atend-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(110,133,106,0.4);
+      transform: translateY(-4px);
+    }
+
+    .atend-card__icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: var(--sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .atend-card__icon svg { width: 24px; height: 24px; stroke: white; fill: none; stroke-width: 1.8; }
+
+    .atend-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+
+    .atend-card p {
+      font-size: 0.96rem;
+      color: rgba(248,244,238,0.65);
+      margin-bottom: 12px;
+    }
+
+    .atend-card ul {
+      list-style: none;
+      margin: 20px 0 32px;
+    }
+
+    .atend-card ul li {
+      font-size: 0.92rem;
+      color: rgba(248,244,238,0.65);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .atend-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 14px;
+      width: 8px; height: 1.5px;
+      background: var(--sage-light);
+    }
+
+    .atend-card .faq {
+      margin-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item h4 {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--sage-light);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .faq-item p {
+      font-size: 0.88rem;
+      margin-bottom: 0;
+    }
+
+    .atend-card .btn--primary {
+      margin-top: 16px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* ─── Section: Contato ───────────────────────────────── */
+    #contato { background: var(--cream-dark); }
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .contato__text p {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      margin-bottom: 32px;
+    }
+
+    .contato-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contato-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: var(--white);
+      border-radius: var(--r-md);
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      transition: all 0.25s;
+      border: 1.5px solid transparent;
+    }
+
+    .contato-link:hover {
+      border-color: var(--sage-light);
+      color: var(--ink);
+      transform: translateX(4px);
+    }
+
+    .contato-link__icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--sage-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contato-link__icon img {
+      width: 20px; height: 20px;
+      object-fit: contain;
+    }
+
+    .contato-link__label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--sage);
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 500;
+    }
+
+    .contato-link__value { color: var(--ink); font-weight: 400; }
+
+    .contato__map {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      background: var(--cream);
+      padding: 32px;
+      border: 1.5px solid var(--sage-light);
+    }
+
+    .contato__map h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    .contato__map p {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .contato__map .map-badge {
+      margin-top: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: var(--sage);
+      font-weight: 500;
+    }
+
+    /* ─── Footer ─────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      padding: 48px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer__logo img {
+      height: 36px;
+      opacity: 0.8;
+      filter: brightness(2) saturate(0);
+      transition: opacity 0.25s;
+    }
+    .footer__logo img:hover { opacity: 1; }
+
+    .footer__copy {
+      font-size: 0.78rem;
+      color: rgba(248,244,238,0.4);
+    }
+
+    .footer__socials {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .footer__social-link {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s, transform 0.25s;
+    }
+
+    .footer__social-link:hover {
+      background: var(--sage);
+      transform: translateY(-2px);
+    }
+
+    .footer__social-link img {
+      width: 18px; height: 18px;
+      object-fit: contain;
+      filter: brightness(2) saturate(0);
+    }
+
+    /* ─── WhatsApp FAB ───────────────────────────────────── */
+    .fab-whatsapp {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 200;
+      width: 58px; height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+      transition: transform 0.25s var(--ease), box-shadow 0.25s;
+      cursor: pointer;
+    }
+
+    .fab-whatsapp:hover {
+      transform: scale(1.08) translateY(-2px);
+      box-shadow: 0 10px 32px rgba(37,211,102,0.5);
+    }
+
+    .fab-whatsapp svg {
+      width: 28px; height: 28px;
+      fill: white;
+    }
+
+    /* ─── Back to top ────────────────────────────────────── */
+    .btn-top {
+      position: fixed;
+      bottom: 100px; right: 28px;
+      z-index: 200;
+      width: 40px; height: 40px;
+      background: var(--white);
+      border: 1.5px solid var(--sage-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+
+    .btn-top.visible { opacity: 1; pointer-events: auto; }
+    .btn-top:hover { background: var(--sage); border-color: var(--sage); }
+    .btn-top:hover svg { stroke: white; }
+    .btn-top svg { width: 18px; height: 18px; stroke: var(--ink-soft); fill: none; stroke-width: 2; }
+
+    /* ─── Animations ─────────────────────────────────────── */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* ─── Mobile nav drawer ──────────────────────────────── */
+    .nav__drawer {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(248,244,238,0.98);
+      backdrop-filter: blur(16px);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .nav__drawer.open { display: flex; }
+
+    .nav__drawer a {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+    .nav__drawer a:hover { color: var(--sage); }
+
+    .nav__drawer .btn--primary {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+    }
+
+    .nav__close {
+      position: absolute;
+      top: 20px; right: 24px;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--ink-soft);
+    }
+
+    /* ─── Responsive ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav { padding: 16px 24px; }
+      .nav.scrolled { padding: 12px 24px; }
+      .nav__links { display: none; }
+      .nav__cta-desktop { display: none; }
+      .nav__burger { display: flex; }
+
+      section { padding: 80px 24px; }
+
+      .terapia-grid,
+      .sobre-grid,
+      .contato-grid { grid-template-columns: 1fr; gap: 48px; }
+
+      .terapia__visual { order: -1; }
+      .terapia__badge { bottom: -12px; right: 12px; }
+
+      .sobre__img-wrap { aspect-ratio: 4/3; }
+
+      .atend-grid { grid-template-columns: 1fr; }
+
+      .contato__map { margin-top: 0; }
+
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero__title { font-size: 2.4rem; }
+      .hero__actions { flex-direction: column; align-items: center; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
 </head>
 
 <body>
-  
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RLT7RZ"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RLT7RZ"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
+  <!-- ── Navigation ───────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Navegação principal">
+    <a href="#inicio" class="nav__logo" aria-label="Início">
+      <img src="images/H-logo.png" alt="Hemanuela Paixão">
+    </a>
 
-<!--  HEADER - Home -->
-  <header>
+    <ul class="nav__links" role="list">
+      <li><a href="#terapia">Terapia</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#atendimentos">Atendimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
 
-  </header>
+    <a href="https://wa.me/5549991721418?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20"
+       target="_blank" rel="noopener" class="nav__links nav__cta nav__cta-desktop btn"
+       style="list-style:none; display:inline-flex; align-items:center;">
+      Agendar sessão
+    </a>
 
-<!--  MAIN - Logo -->
-<main>
-  <div>
-  <figure>
-    <img src="images/H-logo.png" alt="logo">
-  </figure>
+    <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav__drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+    <button class="nav__close" id="drawerClose" aria-label="Fechar menu">×</button>
+    <a href="#terapia" class="drawer-link">Terapia</a>
+    <a href="#sobre" class="drawer-link">Sobre</a>
+    <a href="#atendimentos" class="drawer-link">Atendimentos</a>
+    <a href="#contato" class="drawer-link">Contato</a>
+    <a href="https://wa.me/5549991721418?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20"
+       target="_blank" rel="noopener" class="btn btn--primary">Agendar sessão</a>
   </div>
 
-</main>
-
-
-
-<!--  SECTION 01 - Terapia -->  
-<section class="section-01">
-
-  <div class="terapia">
-    <h2>Você precisa de terapia?</h2>
-    
-      <p> Você já sentiu, no fundo do seu peito, um desejo de se libertar das confusões, da instabilidade, da falta de controle que atormenta o tempo todo?</p>
-      <p> A terapia pode te orientar na ordenação da sua vida. </p>
-      <p> Ordenação em que sentido? </p> 
-      <p>O texto abaixo do <a href="https://www.instagram.com/p/CjtigujJOEL/">@aformacaodoimaginario</a> responde bem:</p>
-      <p id="citacao">"Quando você não tem uma narrativa que mostre claramente por que você chegou até onde está, 
-        você não é ninguém. Você não consegue encontrar quem você é dentro da sua história, dentro dos acontecimentos que te levaram até ali onde você está agora. Você não consegue dizer:
-        Eu sou a pessoa que passou por isso, isso e isso e fiz esta e esta escolha."</p>
-      <p>O processo terapêutico te ajuda a refletir, descobrir e assumir esse papel de autor da própria história.</p>
-      <p>Conte comigo neste processo.</p>
-  </div>
-
-  <div class="eucalipto">
-    <figure>
-      <img src="images/eucalipto.png" alt="eucalipto">
-    </figure>  
-  </div>
-
-</section>
-
-<!--SECTION 02 - Menu -->
-
-<!--section class="section-02" id="section-02">
-
-  <div class="mentoria">
-    <h2>Mentoria</h2>
-      <p>Na mentoria nós focamos em aspectos profissionais.
-      <p>O roteiro e quantidade de sessões são definidos após o primeiro encontro de alinhamento com o mentorado.</p>
-    
-      <h4>Alguns exemplos de objetivos de mentoria:</h4>
-        <ul>
-          <li>orientação vocacional;</li>
-          <li>suporte em processos de seleção;</li>
-          <li>comunicação;</li>
-          <li>relacionamento interpessoal e gestão de conflitos;</li>
-          <li>gestão de equipes;</li>
-        </ul>
-    </div>
-  
-
-</section!-->
-
-
-<!--  SECTION 03 - Sobre mim --> 
-<section class="section-03" id="section-03">
-
-
-  <div class="hemanuela">
-    <h2>Hemanuela Paixão</h2>
-      <p>Sou Psicóloga, formada pela Universidade Federal de Rondônia - UNIR, 
-      em 2010, com ênfase em Terapia Cognitiva Comportamental (TCC) e Psicologia Social e do Trabalho.</p>
-      <p> Atuo desde 2009 na área Organizacional e entre 2021 e 2023, na área de Educação voltada para Segurança do Trabalho. </p>
-      <p> Em 2018, retomei meu interesse pela área clínica. </p> 
-      <p> Fiz a Certificação Italo Marsili (CIM), Especialização em Psicologia Tomista (EPT) e estou na Especialização Saulo Barbosa.</p>
-
-      <p>Atualmente atendo online e presencial, somente em Lages-SC.</p>
-
-      <p>CRP 12/24418</p>
-  </div>
-
-  <div class="sombras">
-    <img src="images/sombras.png" alt="foto">
-  </div>
-
-</section>
-
-
-<!--  FOOTER -->  
-    <footer>
-
-      <div class="footer" >
-        <a href="https://wa.me/5549991721418?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20" target="_blank"> <img src="images/whatsapp.png" alt="whatsapp"></a>
-        <a href="https://www.instagram.com/hemanuelapaixao/" target="_blank"> <img src="images/instagram.png" alt="instagram icon"></a>
-        <a href="index.html" target="_blank"> <img src="images/android-chrome-192x192.png" alt="logo" aria-hidden="true">
-        <a href="https://www.linkedin.com/in/hemanuelap/" target="_blank"> <img src="images/linkedin.png" alt="linkedin icon"></a>
-        <a href="mailto: contato@hemanuelapaixao.com.br" target="_blank"> <img src="images/envelope.png" alt="mail icon"></a>
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero" id="inicio" aria-label="Início">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__content">
+      <span class="hero__eyebrow">Psicóloga · CRP 12/24418</span>
+      <img src="images/H-logo.png" alt="Hemanuela Paixão" class="hero__logo">
+      <h1 class="hero__title">
+        Hemanuela<br><em>Paixão</em>
+      </h1>
+      <p class="hero__subtitle">
+        Acompanhamento psicológico para quem busca se encontrar dentro da própria história.
+      </p>
+      <div class="hero__actions">
+        <a href="https://wa.me/5549991721418?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20"
+           target="_blank" rel="noopener" class="btn btn--primary">
+          Agendar sessão
+        </a>
+        <a href="#terapia" class="btn btn--ghost">Saiba mais</a>
       </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Rolar</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
 
-    </footer>
+  <!-- ── Terapia ───────────────────────────────────────────── -->
+  <section id="terapia" aria-labelledby="terapia-title">
+    <div class="container">
+      <div class="terapia-grid">
 
-<!-- BOTÃO VOLTAR AO TOPO --> 
-<button type="button"
-        class="btn btn-danger btn-floating btn-lg"
-        id="btn-back-to-top">    
-      
-</button>
+        <div class="terapia__visual reveal">
+          <div class="terapia__img-wrap">
+            <img src="images/eucalipto.png" alt="Ramo de eucalipto — símbolo de renovação e cuidado">
+          </div>
+          <div class="terapia__badge">
+            Atendimento online e presencial em Lages&nbsp;SC
+          </div>
+        </div>
 
-<script src="button.js"></script> 
+        <div class="terapia__text reveal reveal-delay-1">
+          <span class="section-label">Por que terapia?</span>
+          <div class="divider"></div>
+          <h2 class="section-title" id="terapia-title">
+            Você precisa<br>de <em>terapia?</em>
+          </h2>
 
+          <p>Você já sentiu, no fundo do seu peito, um desejo de se libertar das confusões, da instabilidade, da falta de controle que atormenta o tempo todo?</p>
+          <p>A terapia pode te orientar na ordenação da sua vida.</p>
+
+          <blockquote class="terapia__quote">
+            "Quando você não tem uma narrativa que mostre claramente por que você chegou até onde está, você não consegue encontrar quem você é dentro da sua história, dentro dos acontecimentos que te levaram até ali onde você está agora."
+            <cite>
+              <a href="https://www.instagram.com/p/CjtigujJOEL/" target="_blank" rel="noopener">
+                @aformacaodoimaginario
+              </a>
+            </cite>
+          </blockquote>
+
+          <p>O processo terapêutico te ajuda a refletir, descobrir e assumir esse papel de autor da própria história. <strong>Conte comigo neste processo.</strong></p>
+
+          <div style="margin-top: 36px;">
+            <a href="#atendimentos" class="btn btn--primary">Ver modalidades</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Sobre ─────────────────────────────────────────────── -->
+  <section id="sobre" aria-labelledby="sobre-title">
+    <div class="container">
+      <div class="sobre-grid">
+
+        <div class="sobre__img-wrap reveal">
+          <img src="images/sombras.png" alt="Hemanuela Paixão — Psicóloga">
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <span class="section-label">Sobre mim</span>
+          <div class="divider"></div>
+          <h2 class="section-title" id="sobre-title">
+            Hemanuela<br><em>Paixão</em>
+          </h2>
+
+          <p class="sobre__text">Sou Psicóloga, formada pela Universidade Federal de Rondônia — UNIR, em 2010, com ênfase em Terapia Cognitiva Comportamental (TCC) e Psicologia Social e do Trabalho.</p>
+          <p class="sobre__text">Atuei desde 2009 na área Organizacional e, entre 2021 e 2023, na área de Educação voltada para Segurança do Trabalho.</p>
+          <p class="sobre__text">Em 2018, retomei meu interesse pela área clínica. Fiz a Certificação Italo Marsili (CIM), a Especialização em Psicologia Tomista (EPT) e estou na Especialização Saulo Barbosa.</p>
+          <p class="sobre__text">Atualmente atendo <strong>online</strong> e <strong>presencial</strong>, somente em Lages-SC.</p>
+
+          <span class="sobre__crp">CRP 12/24418</span>
+
+          <div class="sobre__tags">
+            <span class="tag">TCC</span>
+            <span class="tag">Psicologia Tomista</span>
+            <span class="tag">Área Clínica</span>
+            <span class="tag">Área Organizacional</span>
+            <span class="tag">Online & Presencial</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Atendimentos ──────────────────────────────────────── -->
+  <section id="atendimentos" aria-labelledby="atend-title">
+    <div class="container">
+      <span class="section-label reveal">Modalidades</span>
+      <div class="divider reveal reveal-delay-1"></div>
+      <h2 class="section-title reveal reveal-delay-1" id="atend-title">
+        Como posso<br><em>te ajudar</em>
+      </h2>
+
+      <div class="atend-grid">
+
+        <!-- Terapia Online -->
+        <div class="atend-card reveal reveal-delay-1">
+          <div class="atend-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <h3>Terapia Online</h3>
+          <p>Sessões de psicoterapia pelo conforto da sua casa, com toda a privacidade e qualidade.</p>
+
+          <div class="faq">
+            <div class="faq-item">
+              <h4>Qual a frequência das sessões?</h4>
+              <p>As sessões podem ser semanais ou quinzenais, conforme sua necessidade.</p>
+            </div>
+            <div class="faq-item">
+              <h4>O que preciso para a sessão online?</h4>
+              <p>Acesso à internet, um local confortável e tranquilo. Pode usar celular, notebook, tablet ou computador. Recomendo fones de ouvido para melhor áudio.</p>
+            </div>
+            <div class="faq-item">
+              <h4>Como posso pagar?</h4>
+              <p>Por transferência bancária ou PIX.</p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5549991721418?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20"
+             target="_blank" rel="noopener" class="btn btn--primary">
+            Agendar sessão online
+          </a>
+        </div>
+
+        <!-- Mentoria -->
+        <div class="atend-card reveal reveal-delay-2">
+          <div class="atend-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              <path d="M18 3l2 2-6 6"/>
+            </svg>
+          </div>
+          <h3>Mentoria</h3>
+          <p>Focada em aspectos profissionais, com roteiro e duração definidos juntos no primeiro encontro de alinhamento.</p>
+
+          <ul>
+            <li>Orientação vocacional</li>
+            <li>Suporte em processos de seleção</li>
+            <li>Comunicação</li>
+            <li>Relacionamento interpessoal e gestão de conflitos</li>
+            <li>Gestão de equipes</li>
+          </ul>
+
+          <div class="faq">
+            <div class="faq-item">
+              <h4>Atendimento presencial</h4>
+              <p>Clínica Renata Picolli — R. Gen. Nepomuceno Costa, 500, Sala 01, Centro, Lages-SC.</p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5549991721418?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20"
+             target="_blank" rel="noopener" class="btn btn--primary">
+            Agendar mentoria
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contato ───────────────────────────────────────────── -->
+  <section id="contato" aria-labelledby="contato-title">
+    <div class="container">
+      <div class="contato-grid">
+
+        <div>
+          <span class="section-label reveal">Contato</span>
+          <div class="divider reveal reveal-delay-1"></div>
+          <h2 class="section-title reveal reveal-delay-1" id="contato-title">
+            Vamos<br><em>conversar?</em>
+          </h2>
+          <p class="contato__text reveal reveal-delay-2">
+            Entre em contato para agendar uma sessão ou tirar dúvidas. Estou por aqui.
+          </p>
+
+          <div class="contato-links reveal reveal-delay-2">
+            <a href="https://wa.me/5549991721418?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20"
+               target="_blank" rel="noopener" class="contato-link">
+              <div class="contato-link__icon">
+                <img src="images/whatsapp.png" alt="">
+              </div>
+              <div>
+                <span class="contato-link__label">WhatsApp</span>
+                <span class="contato-link__value">(49) 99172-1418</span>
+              </div>
+            </a>
+
+            <a href="mailto:contato@hemanuelapaixao.com.br" class="contato-link">
+              <div class="contato-link__icon">
+                <img src="images/envelope.png" alt="">
+              </div>
+              <div>
+                <span class="contato-link__label">E-mail</span>
+                <span class="contato-link__value">contato@hemanuelapaixao.com.br</span>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/hemanuelapaixao/" target="_blank" rel="noopener" class="contato-link">
+              <div class="contato-link__icon">
+                <img src="images/instagram.png" alt="">
+              </div>
+              <div>
+                <span class="contato-link__label">Instagram</span>
+                <span class="contato-link__value">@hemanuelapaixao</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/hemanuelap/" target="_blank" rel="noopener" class="contato-link">
+              <div class="contato-link__icon">
+                <img src="images/linkedin.png" alt="">
+              </div>
+              <div>
+                <span class="contato-link__label">LinkedIn</span>
+                <span class="contato-link__value">Hemanuela Paixão</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="contato__map">
+            <h3>Atendimento Presencial</h3>
+            <p>
+              <strong>Clínica Renata Picolli</strong><br>
+              R. Gen. Nepomuceno Costa, 500 — Sala 01<br>
+              Centro, Lages — SC<br>
+              CEP 88502-130
+            </p>
+            <a href="https://maps.google.com/?q=R.+Gen.+Nepomuceno+Costa,+500,+Lages,+SC"
+               target="_blank" rel="noopener" class="map-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Ver no Google Maps
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#inicio" class="footer__logo" aria-label="Voltar ao topo">
+        <img src="images/android-chrome-192x192.png" alt="Hemanuela Paixão">
+      </a>
+
+      <p class="footer__copy">
+        © 2025 Hemanuela Paixão · Psicóloga · CRP 12/24418
+      </p>
+
+      <div class="footer__socials" aria-label="Redes sociais">
+        <a href="https://wa.me/5549991721418" target="_blank" rel="noopener"
+           class="footer__social-link" aria-label="WhatsApp">
+          <img src="images/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/hemanuelapaixao/" target="_blank" rel="noopener"
+           class="footer__social-link" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/hemanuelap/" target="_blank" rel="noopener"
+           class="footer__social-link" aria-label="LinkedIn">
+          <img src="images/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:contato@hemanuelapaixao.com.br"
+           class="footer__social-link" aria-label="E-mail">
+          <img src="images/envelope.png" alt="E-mail">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── WhatsApp FAB ──────────────────────────────────────── -->
+  <a href="https://wa.me/5549991721418?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20"
+     target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Conversar no WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ── Back to top ───────────────────────────────────────── -->
+  <button class="btn-top" id="btnTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ── Scripts ───────────────────────────────────────────── -->
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Back to top
+    const btnTop = document.getElementById('btnTop');
+    window.addEventListener('scroll', () => {
+      btnTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    btnTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Mobile drawer
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('drawer');
+    const drawerClose = document.getElementById('drawerClose');
+
+    const openDrawer = () => {
+      drawer.classList.add('open');
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeDrawer = () => {
+      drawer.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
+    burger.addEventListener('click', openDrawer);
+    drawerClose.addEventListener('click', closeDrawer);
+    drawer.querySelectorAll('.drawer-link, .btn').forEach(link => {
+      link.addEventListener('click', closeDrawer);
+    });
+  </script>
 </body>
 </html>
